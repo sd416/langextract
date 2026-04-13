@@ -56,7 +56,7 @@ jobs:
 
       - name: Comment if PR needs update
         if: ${{ steps.check.outputs.commits_behind != '0' }}
-        uses: actions/github-script@v8
+        uses: actions/github-script@v9
         with:
           script: |
             const behind = ${{ steps.check.outputs.commits_behind }};
